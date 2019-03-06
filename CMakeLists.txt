@@ -3,4 +3,5 @@ set(COMPONENT_ADD_INCLUDEDIRS "include")
 
 register_component()
 
-component_compile_options(-std=c++17)
+set_target_properties(GSL PROPERTIES INTERFACE_COMPILE_OPTIONS -std=c++17)
+
