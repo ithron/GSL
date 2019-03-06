@@ -1,0 +1,24 @@
+menu GSL
+
+choice
+  prompt "Protocol Violation Behaviour"
+
+  config GSL_TERMINATE_ON_CONTRACT_VIOLATION
+    bool "Terminate on contract violation"
+    help
+      std::terminate will be called
+
+  config GSL_THROW_ON_CONTRACT_VIOLATION
+    bool "Throw on contract violation"
+    help
+      a gsl::fail_fast exception will be thrown
+
+  config GSL_UNENFORCED_ON_CONTRACT_VIOLATION
+    bool "Unenforced on contract violation"
+    help
+      nothing happens
+
+endchoice
+
+endmenu
+
